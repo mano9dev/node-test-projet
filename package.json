@@ -1,0 +1,43 @@
+{
+  "name": "test-services",
+  "version": "1.0.0",
+  "description": "projet to make services test service",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "watch": "tsc --build --watch",
+    "clean": "tsc --build --clean",
+    "start": "npm run build && node ./build/server.js",
+    "test": "jest --verbose --collect-coverage --runInBand",
+    "dev": "ts-node-dev ./src/main.ts -- --inspect --transpileOnly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mano9dev/node-test-projet.git"
+  },
+  "keywords": [
+    "nodejs",
+    "test"
+  ],
+  "author": "emmanuel zanmenou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mano9dev/node-test-projet/issues"
+  },
+  "homepage": "https://github.com/mano9dev/node-test-projet#readme",
+  "dependencies": {
+    "D": "^1.0.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "ts-node-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.3.3",
+    "jest": "^29.5.0",
+    "typescript": "^5.1.6"
+  }
+}
